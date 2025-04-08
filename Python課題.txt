@@ -1,0 +1,118 @@
+●class xxx(int)
+
+
+
+の時、intはどこにかかってるの？
+
+
+
+コンストラクタの引数とかかってるん？
+
+
+
+以下のようにclassの後に()無いのもあるが
+
+class ListNode:
+
+   def __init__(self, val: int, next: ListNode):
+
+     self.val = val
+
+     self.next = next
+
+
+
+class Repository:
+
+  def get(self, id: str) -> tuple[str, str]:
+
+   return (id, "get")
+
+
+
+●クラスやメソッドでジェネリック型を使う
+
+	引数の型により、戻り値の型も変えられる
+
+
+
+https://tech-blog.abeja.asia/entry/python-312-typing-202402
+
+
+
+
+
+アンスコのことを言ってるがよく見て
+
+
+
+https://qiita.com/junkmd/items/1aa7be17401cfebab92d
+
+
+
+●引数に自分のクラス型をかくときは、from __future__ import annotationsをインポートする
+
+
+
+https://qiita.com/MtDeity/items/fa6cfc4fff8f58140caa
+
+
+
+class ListNode:
+
+   def __init__(self, val: int, next: ListNode):
+
+     self.val = val
+
+     self.next = next
+
+
+
+●アノテーションの@で、クラスメソッド、スタティックメソッドの指定できる。geter、seterを指定できる
+
+●戻り値の型の指定->を学ぶ
+
+
+
+https://qiita.com/Showy1/items/b5fe2a39ecae83ab738f
+
+
+
+class Person:
+
+   @staticmethod
+
+   def get_cls_name() -> str:
+
+     return "Person"
+
+
+
+
+
+●メソッドは以下のように書けば返り値を指定できる。
+
+
+https://qiita.com/__Lily__/items/7e1a2c1eee8c69754dd7
+
+
+
+def sample() -> int:
+    return 0
+
+def sample() -> bool:
+    return True
+
+def sample() -> str:
+    return 'abc'
+
+def sample() -> list[int]:
+    return [0, 1, 2]
+
+
+
+●自作例外はクラスをExceptionを継承してエラー文を書く
+
+class MyException(Exception):
+
+https://qiita.com/s_szk/items/e6b932816667e7974f0e
